@@ -6,4 +6,4 @@ https://wanyi0309.github.io/BamSnap-LRS_visualization_gallery
 
 ## Highlight-mode synthetic validation
 
-[Open the Highlight-mode synthetic showcase](https://wanyi0309.github.io/Bamsnap-LRS_visualization_gallery/workflow/highlight_synthetic/highlight_mode_synthetic_showcase.html)
+[Open the Highlight-mode synthetic showcase](https://wanyi0309.github.io/BamSnap-LRS_visualization_gallery/workflow/highlight_synthetic/highlight_mode_synthetic_showcase.html)
