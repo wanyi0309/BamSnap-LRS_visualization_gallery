@@ -1,4 +1,3 @@
-
 library(scatterplot3d)
 
 # Read Highlight data
@@ -8,22 +7,17 @@ dat <- read.delim(
   header = TRUE,
   check.names = FALSE
 )
-
 # Convert to numeric
 dat$Plot_interval_bp <- as.numeric(
   gsub(",", "", dat[["Plot interval (bp)"]])
 )
-
 dat$Displayed_records <- as.numeric(
   gsub(",", "", dat[["total_reads"]])
 )
-
 dat$Runtime_s <- as.numeric(dat$Runtime_s)
-
 dat$Maximum_RSS_GiB <- as.numeric(
   dat$Maximum_RSS_GiB
 )
-
 # Check data
 sum(is.na(dat$Plot_interval_bp))
 sum(is.na(dat$Displayed_records))
@@ -32,6 +26,11 @@ sum(is.na(dat$Maximum_RSS_GiB))
 
 
 # Plot A: Runtime
+pdf(
+  "C:/Users/cwy/Downloads/Highlight_Runtime_3D.pdf",
+  width = 8,
+  height = 7
+)
 s3d <- scatterplot3d(
   x = dat$Plot_interval_bp,
   y = dat$Displayed_records,
@@ -59,9 +58,14 @@ s3d$points3d(
   col = "#2878B5",
   cex = 1
 )
-
+dev.off()
 
 # Plot B: Memory
+pdf(
+  "C:/Users/cwy/Downloads/Highlight_Memory_3D.pdf",
+  width = 8,
+  height = 7
+)
 G3d <- scatterplot3d(
   x = dat$Plot_interval_bp,
   y = dat$Displayed_records,
@@ -89,4 +93,4 @@ G3d$points3d(
   col = "#D97932",
   cex = 1
 )
-
+dev.off()
