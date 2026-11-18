@@ -1,4 +1,4 @@
-ID	Plot interval (bp)	total_reads	Runtime_s	Maximum_RSS_GiB
+ID	Plot interval (bp)	total_records	Runtime_s	Maximum_RSS_GiB
 random_region1	35,995	176	10.4	0.103
 random_region2	16,057	112	7.8	0.102
 random_region3	2,711	56	6.47	0.082
