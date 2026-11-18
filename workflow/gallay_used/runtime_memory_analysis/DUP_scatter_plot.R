@@ -2,7 +2,7 @@ install.packages("scatterplot3d")
 library(scatterplot3d)
 
 dat <- read.delim(
-  "C:\Users\cwy\Downloads\DUP_3D_plot.txt",
+  "C:/Users/cwy/Downloads/DUP_3D_plot.txt",
   sep = "\t",
   header = TRUE,
   check.names = FALSE
@@ -12,13 +12,10 @@ dat <- read.delim(
 dat$Plot_interval_bp <- as.numeric(
   gsub(",", "", dat[["Plot interval (bp)"]])
 )
-
 dat$Displayed_records <- as.numeric(
   gsub(",", "", dat[["all_displayed_records"]])
 )
-
 dat$Runtime_s <- as.numeric(dat$Runtime_s)
-
 dat$Maximum_RSS_GiB <- as.numeric(
   dat$Maximum_RSS_GiB
 )
@@ -28,6 +25,13 @@ sum(is.na(dat$Plot_interval_bp))
 sum(is.na(dat$Displayed_records))
 sum(is.na(dat$Runtime_s))
 sum(is.na(dat$Maximum_RSS_GiB))
+
+
+pdf(
+  "C:/Users/cwy/Downloads/DUP_Runtime_3D.pdf",
+  width = 8,
+  height = 7
+)
 
 s3d <- scatterplot3d(
   x = dat$Plot_interval_bp,
@@ -63,9 +67,13 @@ xyz <- s3d$xyz.convert(
   dat$Displayed_records,
   dat$Runtime_s
 )
+dev.off()
 
-
-
+pdf(
+  "C:/Users/cwy/Downloads/DUP_Memory_3D.pdf",
+  width = 8,
+  height = 7
+)
 G3d <- scatterplot3d(
   x = dat$Plot_interval_bp,
   y = dat$Displayed_records,
@@ -100,4 +108,4 @@ xyz <- G3d$xyz.convert(
   dat$Displayed_records,
   dat$Maximum_RSS_GiB
 )
-
+dev.off()
