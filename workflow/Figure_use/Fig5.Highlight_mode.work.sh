@@ -1,5 +1,5 @@
 # For details on downloading and generating the BAM, FASTA and VCF files used in this script
-# please refer to https://github.com/wanyi0309/Bamsnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/phase_work.sh
+# please refer to https://github.com/wanyi0309/BamSnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/phase_work.sh
 
 # select region: chr12	74994312	75006232	random_region6
 
