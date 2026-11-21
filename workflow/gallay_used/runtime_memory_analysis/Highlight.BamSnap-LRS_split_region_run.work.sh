@@ -20,14 +20,14 @@ do
 
     echo "Running ${id} ..."
 
-    if /home/stereonote/time_k8/bin/time -v \
+    if time -v \
         -o "logs/${id}.time.txt" \
-        python /data/work/01.bamsnap_lrs/13.modify.v2.0.0.1028/bin/bamsnap-lrs highlight \
+        python bamsnap-lrs highlight \
         --highlight-vcf ../HG002.phased_het_snps.vcf.gz \
-        --bam /Files/chengyang2/bam/HG002/HG002.SequelII.merged_15kb_20kb.pbmm2.GRCh38.haplotag.10x.bam \
+        --bam HG002.SequelII.merged_15kb_20kb.pbmm2.GRCh38.haplotag.10x.bam \
         --regions "$region_bed" \
         --out-prefix "plots/${id}.png" \
-        --fa /Files/chenjin/WGS_hg38.fa \
+        --fa hg38.fa \
         --no-hap-filter \
         --padding 0 \
         --mapq 0 \
