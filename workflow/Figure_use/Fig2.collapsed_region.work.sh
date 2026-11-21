@@ -22,6 +22,5 @@ hawkeye.py sv_browse -i  HIFI.primary.sort.bam -b target.bed  -f bed -t 1 -r chm
 
 wally-v0.9.2-linux-amd64 region  -g chm13v2.0.fa -r chr5:705000-710000 HIFI.primary.sort.bam  -x 700 -q 0
 
-
 samtools view HIFI.primary.sort.bam chr5:705000-710000 -bh > assembly_validation.bam
 samtools index assembly_validation.bam
