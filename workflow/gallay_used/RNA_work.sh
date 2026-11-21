@@ -9,9 +9,9 @@ wget https://www.encodeproject.org/files/ENCFF169CBQ/@@download/ENCFF169CBQ.bam
 wget https://www.encodeproject.org/files/ENCFF708JUG/@@download/ENCFF708JUG.bam
 
 ##reference genome
-wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_genomic.fna.gz
-mv GCF_000001405.40_GRCh38.p14_genomic.fna.gz hg38.fa.gz
-gzip -d hg38.fa.gz
+wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/GRCh38.primary_assembly.genome.fa.gz
+gunzip GRCh38.primary_assembly.genome.fa.gz
+mv GRCh38.primary_assembly.genome.fa hg38.fa
 
 #Data processing
 # https://cgl.gi.ucsc.edu/data/LRGASP/annotations/human/LRGASP_manual_annotation.human.cDNA_PacBio.bed.gz
