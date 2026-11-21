@@ -29,7 +29,18 @@ awk '{print $1"\t"$2"\t"$3"\trandom_region"NR}' random_50_regions.bed > random_5
 # Plot
 time -v bamsnap-lrs highlight --highlight-vcf HG002.phased_het_snps.vcf.gz --bam HG002.SequelII.merged_15kb_20kb.pbmm2.GRCh38.haplotag.10x.bam --regions random_50_regions.bed  --out-prefix bamsnap/SNV.png --fa hg38.fa  --no-hap-filter --padding 0 --mapq 0 > bamsnap_hap.log 2>&1
 
-time -v wally-v0.9.2-linux-amd64 region --map-qual 0 --snv-vaf 0 --snv-cov 0 --width 1200 -ghg38.fa -R random_50_regions.forwally.bed HG002.SequelII.merged_15kb_20kb.pbmm2.GRCh38.haplotag.10x.bam > wally_hap.log 2>&1
+time -v wally-v0.9.2-linux-amd64 region --map-qual 0 --snv-vaf 0 --snv-cov 0 --width 1200 -g hg38.fa -R random_50_regions.forwally.bed HG002.SequelII.merged_15kb_20kb.pbmm2.GRCh38.haplotag.10x.bam > wally_hap.log 2>&1
 
 tar  -czvf  wally.Highlight.tar.gz  random_region*png
 tar  -czvf bamsnap_lrs.Highlight.tar.gz bamsnap/*png
+
+python bamsnap_benchmark_stats_per_bam.py highlight \
+    --highlight-vcf HG002.phased_het_snps.vcf.gz \
+    --bam HG002.SequelII.merged_15kb_20kb.pbmm2.GRCh38.haplotag.10x.bam \
+    --regions random_50_regions.bed \
+    --stats-out phase_stats.tsv \
+    --fa hg38.fa \
+    --no-hap-filter \
+    --padding 0 \
+    --mapq 0 \
+    --bamsnap-src path/to/src/bamsnap_lrs/
