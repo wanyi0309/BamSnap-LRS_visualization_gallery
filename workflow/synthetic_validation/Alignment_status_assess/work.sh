@@ -1,5 +1,5 @@
 ## BAM source
-HIFI.primary.sort.bam ONT.primary.sort.bam from https://github.com/wanyi0309/BamSnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/inversion_work.sh
+HIFI.primary.sort.bam ONT.primary.sort.bam from  https://github.com/wanyi0309/BamSnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/inversion_work.sh
 SRR8955953.pacbio.hg38.sorted.bam SRR16005301.ont.hg38.sorted.bam from https://github.com/wanyi0309/BamSnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/duplication_work.sh
 
 
