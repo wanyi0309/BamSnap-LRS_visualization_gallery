@@ -34,11 +34,11 @@ python bed12_gene_regions.py LRGASP_manual_annotation.human.cDNA_PacBio.bed.gz -
 awk '{print $1"\t"($2-1000)"\t"($3+1000)"\t"$4}' LRGASP_cDNA_PacBio_50genes_regions.bed > LRGASP_cDNA_PacBio_50genes_regions.padding.bed
 
 #Visualization
-time -v bamsnap-lrs rna --bam human.hg38.Pacbio.merged.bam --bam human.hg38.ONT.merged.bam --regions LRGASP_cDNA_PacBio_50genes_regions.bed --out-prefix bamsnap/RNA.png  --mapq 0 --fa hg38.fa  --padding 1000  --bed LRGASP_manual_annotation.human.cDNA_PacBio.bamsnaplrs.bed --show-axis > bamsnap_RNA.runtime.log  2>&1 
+time -v python bamsnap-lrs rna --bam human.hg38.Pacbio.unfilter.merged.bam --regions LRGASP_cDNA_PacBio_50genes_regions.bed --out-prefix bamsnap/RNA.png  --mapq 0 --fa hg38.fa  --padding 1000  --bed LRGASP_manual_annotation.human.cDNA_PacBio.bamsnaplrs.bed --show-axis > bamsnap_RNA.runtime.log  2>&1 
 
-time -v hawkeye.py rna_browse -g hg38 -i human.hg38.Pacbio.merged.bam,human.hg38.ONT.merged.bam  -b LRGASP_cDNA_PacBio_50genes_regions.padding.bed -o svhawkeye_test -q 0 -I 0  -F png > svhawkeye_RNA.runtime.log  2>&1 
+time -v hawkeye.py rna_browse -g hg38 -i human.hg38.Pacbio.unfilter.merged.bam  -b LRGASP_cDNA_PacBio_50genes_regions.padding.bed -o svhawkeye_test -q 0 -I 0  -F png > svhawkeye_RNA.runtime.log  2>&1 
 
-time -v wally-v0.9.2-linux-amd64 region -g hg38.fa -R LRGASP_cDNA_PacBio_50genes_regions.padding.bed human.hg38.Pacbio.merged.bam human.hg38.ONT.merged.bam --map-qual 0 --bed LRGASP_manual_annotation.human.cDNA_PacBio.wally.sorted.bed.gz > wally_RNA.runtime.log   2>&1 
+time -v wally-v0.9.2-linux-amd64 region -g hg38.fa -R LRGASP_cDNA_PacBio_50genes_regions.padding.bed human.hg38.Pacbio.unfilter.merged.bam --map-qual 0 --bed LRGASP_manual_annotation.human.cDNA_PacBio.wally.sorted.bed.gz > wally_RNA.runtime.log   2>&1 
 
 tar  -czvf  wally.RNA.tar.gz  *png
 tar  -czvf bamsnap_lrs.RNA.tar.gz bamsnap/*png
