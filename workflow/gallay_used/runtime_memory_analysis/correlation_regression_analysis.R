@@ -4,13 +4,13 @@
 # ==========================================
 
 dup <- read.delim(
-  "C:/Users/cwy/Downloads/DUP_3D_plot.txt",
+  "DUP_3D_plot.txt",
   sep = "\t",
   check.names = FALSE
 )
 
 highlight <- read.delim(
-  "C:/Users/cwy/Downloads/Highlight_3D_plot.txt",
+  "Highlight_3D_plot.txt",
   sep = "\t",
   check.names = FALSE
 )
@@ -151,7 +151,7 @@ results <- rbind(
 
 #write.table(
   results,
-  "C:/Users/cwy/Downloads/regression_results.tsv",
+  "regression_results.tsv",
   sep = "\t",
   row.names = FALSE,
   quote = FALSE
