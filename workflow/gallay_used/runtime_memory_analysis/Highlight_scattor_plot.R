@@ -2,7 +2,7 @@ library(scatterplot3d)
 
 # Read Highlight data
 dat <- read.delim(
-  "C:/Users/cwy/Downloads/Highlight_3D_plot.txt",
+  "Highlight_3D_plot.txt",
   sep = "\t",
   header = TRUE,
   check.names = FALSE
@@ -27,7 +27,7 @@ sum(is.na(dat$Maximum_RSS_GiB))
 
 # Plot A: Runtime
 pdf(
-  "C:/Users/cwy/Downloads/Highlight_Runtime_3D.pdf",
+  "Highlight_Runtime_3D.pdf",
   width = 8,
   height = 7
 )
@@ -62,7 +62,7 @@ dev.off()
 
 # Plot B: Memory
 pdf(
-  "C:/Users/cwy/Downloads/Highlight_Memory_3D.pdf",
+  "Highlight_Memory_3D.pdf",
   width = 8,
   height = 7
 )
