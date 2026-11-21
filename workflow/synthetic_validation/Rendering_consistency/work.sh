@@ -1,4 +1,4 @@
-## All relevant BAM files can be obtained via the download links and methods specified in `*_work.sh` located in `https://github.com/wanyi0309/Bamsnap-LRS_visualization_gallery/tree/main/workflow/gallay_used`.
+## All relevant BAM files can be obtained via the download links and methods specified in `*_work.sh` located in `https://github.com/wanyi0309/BamSnap-LRS_visualization_gallery/tree/main/workflow/gallay_used`.
 
 ## insertion 
 bamsnap-lrs dna --bam HIFI.primary.sort.bam --bam ONT.primary.sort.bam --regions insertion_select.region.bed --out-prefix ins/insertion_ONT_HIFI.png --fa chm13v2.0.fa  --show-axis --show-coverage --padding 0  --detail high --overview-detail show
