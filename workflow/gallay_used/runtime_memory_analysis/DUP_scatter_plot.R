@@ -2,7 +2,7 @@ install.packages("scatterplot3d")
 library(scatterplot3d)
 
 dat <- read.delim(
-  "C:/Users/cwy/Downloads/DUP_3D_plot.txt",
+  "DUP_3D_plot.txt",
   sep = "\t",
   header = TRUE,
   check.names = FALSE
@@ -28,7 +28,7 @@ sum(is.na(dat$Maximum_RSS_GiB))
 
 
 pdf(
-  "C:/Users/cwy/Downloads/DUP_Runtime_3D.pdf",
+  "DUP_Runtime_3D.pdf",
   width = 8,
   height = 7
 )
@@ -70,7 +70,7 @@ xyz <- s3d$xyz.convert(
 dev.off()
 
 pdf(
-  "C:/Users/cwy/Downloads/DUP_Memory_3D.pdf",
+  "DUP_Memory_3D.pdf",
   width = 8,
   height = 7
 )
