@@ -43,3 +43,15 @@ time -v wally-v0.9.2-linux-amd64 region -g hg38.fa -R LRGASP_cDNA_PacBio_50genes
 tar  -czvf  wally.RNA.tar.gz  *png
 tar  -czvf bamsnap_lrs.RNA.tar.gz bamsnap/*png
 tar  -czvf svhawkeye.RNA.tar.gz svhawkeye_test/figure/*png
+
+python bamsnap_benchmark_stats_per_bam.py rna \
+    --bam human.hg38.Pacbio.unfilter.merged.bam \
+    --regions LRGASP_cDNA_PacBio_50genes_regions.bed \
+    --stats-out ./RNA_Pacbio.stats.tsv \
+    --mapq 0 \
+    --fa hg38.fa \
+    --padding 1000 \
+    --bed LRGASP_manual_annotation.human.cDNA_PacBio.bamsnaplrs.bed \
+    --show-axis \
+    --show-coverage \
+    --bamsnap-src path/to/src/bamsnap_lrs/
