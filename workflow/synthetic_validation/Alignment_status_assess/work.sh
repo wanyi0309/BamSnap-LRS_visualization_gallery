@@ -1,6 +1,6 @@
 ## BAM source
-HIFI.primary.sort.bam ONT.primary.sort.bam from https://github.com/wanyi0309/Bamsnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/inversion_work.sh
-SRR8955953.pacbio.hg38.sorted.bam SRR16005301.ont.hg38.sorted.bam from https://github.com/wanyi0309/Bamsnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/duplication_work.sh
+HIFI.primary.sort.bam ONT.primary.sort.bam from https://github.com/wanyi0309/BamSnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/inversion_work.sh
+SRR8955953.pacbio.hg38.sorted.bam SRR16005301.ont.hg38.sorted.bam from https://github.com/wanyi0309/BamSnap-LRS_visualization_gallery/blob/main/workflow/gallay_used/duplication_work.sh
 
 
 cat INV.check_region.txt | while read region CASE
@@ -41,9 +41,9 @@ do
     cd ..
 done
 
-tar  -czvf  DUP1.result.tar.gz  DUP16/
-tar  -czvf  DUP2.result.tar.gz  DUP17/
-tar  -czvf  DUP3.result.tar.gz  DUP18/
+tar  -czvf  DUP16.result.tar.gz  DUP16/
+tar  -czvf  DUP17.result.tar.gz  DUP17/
+tar  -czvf  DUP18.result.tar.gz  DUP18/
 tar  -czvf  INV1.result.tar.gz  INV1/
 tar  -czvf  INV2.result.tar.gz  INV2/
 tar  -czvf  INV3.result.tar.gz  INV3/
