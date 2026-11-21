@@ -12,9 +12,9 @@ wget 	https://sra-pub-run-odp.s3.amazonaws.com/sra/SRR16005301/SRR16005301
 fastq-dump SRR16005301 --split-3 --gzip --defline-qual '+'  -O fq
 
 ##reference genome
-wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_genomic.fna.gz
-mv GCF_000001405.40_GRCh38.p14_genomic.fna.gz hg38.fa.gz
-gzip -d hg38.fa.gz
+wget https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/GRCh38.primary_assembly.genome.fa.gz
+gunzip GRCh38.primary_assembly.genome.fa.gz
+mv GRCh38.primary_assembly.genome.fa hg38.fa
 
 #Mapping
 ##ONT
