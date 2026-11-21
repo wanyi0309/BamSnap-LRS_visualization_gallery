@@ -55,3 +55,15 @@ time -v wally-v0.9.2-linux-amd64 region --map-qual 0 --snv-vaf 0 --snv-cov 0 --w
 tar  -czvf  wally.INV.tar.gz  INV*png
 tar  -czvf bamsnap_lrs.INV.tar.gz bamsnap/*png
 tar  -czvf svhawkeye.INV.tar.gz svhawkeye/figure/*png
+
+python bamsnap_benchmark_stats_per_bam.py dna \
+    --bam HIFI.primary.sort.bam \
+    --bam ONT.primary.sort.bam \
+    --regions inversion.vcf \
+    --stats-out ./inversion_ONT_HIFI.stats.tsv \
+    --fa chm13v2.0.fa \
+    --padding 2000 \
+    --show-axis \
+    --show-coverage \
+    --show-supp \
+    --bamsnap-src path/to/src/bamsnap_lrs/
