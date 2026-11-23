@@ -1,5 +1,5 @@
 # Bamsnap-LRS visual gallery
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24456587.svg)](https://doi.org/10.5281/zenodo.24456587)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24460447.svg)](https://doi.org/10.5281/zenodo.24460447)
 
 
 ## Highlight-mode synthetic validation
